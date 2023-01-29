@@ -26,6 +26,7 @@ if fin_res > 0:
     print(f"Рентабельность выручки = {profit}")
     employees = int(input("Введите численность сотрудников фирмы: "))
     profit_per_employee = fin_res / employees
-    print(f"Прибыль фирмы в расчете на одного сотрудника= {profit_per_employee}")
+    print(f"Прибыль фирмы в расчете на одного сотрудника ="
+          f" {profit_per_employee}")
 else:
     print("Финансовый результат - убыток")
