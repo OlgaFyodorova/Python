@@ -28,4 +28,4 @@ if fin_res > 0:
     profit_per_employee = fin_res / employees
     print(f"Прибыль фирмы в расчете на одного сотрудника= {profit_per_employee}")
 else:
-    print ("Финансовый результат - убыток")
+    print("Финансовый результат - убыток")
