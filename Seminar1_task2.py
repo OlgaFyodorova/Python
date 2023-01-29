@@ -9,6 +9,6 @@
 # Время в формате ч:м:с - 1.0 : 60.0 : 3600
 
 time1 = int(input("Введите время в секундах: "))
-time2_hours = int(time1/3600)
-time3_minutes = int(time1/60)
+time2_hours = float(time1/3600)
+time3_minutes = float(time1/60)
 print(f"Время в формате ч:м:с - {time2_hours} : {time3_minutes} : {time1}")
