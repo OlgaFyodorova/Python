@@ -8,20 +8,8 @@
 # Введите целые числа через пробел: 1 2 3
 # Результат: 2 1 3
 
-
-my_list = int(input("Введите целые числа через пробел: "))
-if len(my_list) % 2 == 0:
-    i = 0
-    while i < len(my_list):
-        el = my_list[i]
-        my_list[i] = my_list[i+1]
-        my_list[i+1] = el
-        i += 2
-else:
-    i = 0
-    while i < len(my_list) - 1:
-        el = my_list[i]
-        my_list[i] = my_list[i + 1]
-        my_list[i + 1] = el
-        i += 2
-print(my_list)
+my_list = input("Введите целые числа через пробел: ")
+a = my_list.split(' ')
+for i in range(1, len(a), 2):
+    a[i - 1], a[i] = a[i], a[i - 1]
+print(' '.join([str(i) for i in a]))
