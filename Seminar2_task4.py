@@ -8,8 +8,7 @@
 # Введите целые числа через пробел: 1 2 3
 # Результат: 2 1 3
 
-my_list = input("Введите целые числа через пробел: ")
-a = my_list.split(' ')
+a = my_list.split = input("Введите целые числа через пробел: ")
 for i in range(1, len(a), 2):
     a[i - 1], a[i] = a[i], a[i - 1]
 print(' '.join([str(i) for i in a]))
