@@ -16,10 +16,73 @@
 # а значение — список значений-характеристик, например список названий товаров.
 #
 # Пример:
-#
 # {
 # “названия”: [“компьютер”, “принтер”, “сканер”],
 # “цены”: [20000, 6000, 2000],
 # “количества”: [5, 2, 7],
 # “ед”: [“шт.”]
 # }
+
+products, order = [], 1
+title, price, quantity = None, None, None
+
+while True:
+    if title is None:
+        title = input('Введите название товара: ')
+        if not title.isalnum():
+            print('Наименование товара не может быть пустым. Попробуйте еще '
+                  'раз.')
+            continue
+
+    if price is None:
+        price = input('Введите стоимость товара: ')
+        if not price.isdigit():
+            print('Цена должна быть целым числом. Попробуйте еще раз.')
+            continue
+        price = int(price)
+
+    if quantity is None:
+        quantity = input('Введите количество: ')
+        if not quantity.isdigit():
+            print('Количество должно быть целым числом. Попробуйте еще раз.')
+            continue
+        quantity = int(quantity)
+
+    unit = input('Введите единицу измерения: ')
+    if not unit.isalpha():
+        print('Единица изменерения не может быть пустой. Попробуйте еще раз.')
+        continue
+
+    products.append((
+        order,
+        {
+            'название': title,
+            'цена': price,
+            'количество': quantity,
+            'eд': unit
+        }
+    ))
+
+    title, price, quantity = None, None, None
+    order += 1
+
+    print(products)
+
+    q = input('Формирование списка завершено? (y/N)) ')
+    if q.lower() == 'y':
+        break
+
+analitics = {
+    'название': [],
+    'цена': [],
+    'количество': [],
+    'eд': set()
+}
+
+for _, item in products:
+    analitics['название'].append(item['название'])
+    analitics['цена'].append(item['цена'])
+    analitics['количество'].append(item['количество'])
+    analitics['eд'].add(item['eд'])
+
+print(analitics)
