@@ -22,7 +22,7 @@ def random_num(user_number, random_number=randint(0, 100), count_attempt=0):
         else:
             print(f'Число меньше загаданного')
     return (random_num(user_number=int(input('Попробуйте еще раз - ')),
-                          count_attempt=count_attempt + 1))
+                       count_attempt=count_attempt + 1))
 
 
 print('Отгадайте число, загаданное компьютером. У Вас есть 10 '
