@@ -16,7 +16,6 @@
 #
 # Process finished with exit code 0
 
-
 def my_func(num1, num2):
     try:
         res = num1 / num2
@@ -26,4 +25,4 @@ def my_func(num1, num2):
 
 
 print(my_func(int(input("Введите первое число: ")), int(input("Введите "
-"второе число: = "))))
+      "второе число: "))))

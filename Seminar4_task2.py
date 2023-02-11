@@ -7,3 +7,19 @@
 # Пример:
 # Иван Иванов 1846 года рождения, проживает в городе Москва,
 # email: jackie@gmail.com, телефон: 01005321456
+
+name = input('Введите имя: ')
+surname = input('Введите фамилию: ')
+year = input('Введите год рождения: ')
+city = input('Введите город проживания: ')
+email = input('Введите email: ')
+phone = input('Введите номер телефона: ')
+
+
+def my_func(name, surname, year, city, email, phone):
+    return ' '.join([name, surname, year, city, email, phone])
+
+
+print(f"{surname}, {name}, {year} года рождения, проживает в городе {city},  "
+      f"email: {email}, телефон: {phone}")
+
