@@ -6,13 +6,17 @@
 необходимо запускать скрипт с параметрами.
 """
 
-def sal():
+
+def salary():
     try:
-        time = float(input('Выработка в часах '))
-        salary = int(input('Ставка в у.е. '))
-        bonus = int(input('Премия в у.е. '))
-        res = time * salary + bonus
-        print(f'заработная плата сотрудника  {res}')
+        time = float(input('Введите количество часов, отработанных '
+                           'сотрудником: '))
+        hourly_rate = float(input('Введите стоимость 1 часа работы: '))
+        bonus = float(input('Введите премию сотрудника: '))
+        salary = time * hourly_rate + bonus
+        print(f'Заработная плата сотрудника составила: {salary}')
     except ValueError:
         return print('Not a number')
-sal()
+
+
+salary()
