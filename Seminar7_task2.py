@@ -9,3 +9,24 @@
 # Массу и толщину сделать публичными атрибутами.
 # Проверить работу метода.
 # Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
+
+class Road:
+    __length = None
+    __width = None
+    weigt = None
+    thickness = None
+
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def intake(self):
+        self.weigt = 25
+        self.thickness = 0.05
+        intake = self.length * self.width * self.weigt * self.thickness / 1000
+        print(f'Масса асфальта, необходимого для покрытия всего дорожного '
+              f'полотна равна {intake} тоннам')
+
+
+asphalt_mass = Road(20000, 5)
+asphalt_mass.intake()
