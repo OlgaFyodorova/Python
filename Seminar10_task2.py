@@ -10,3 +10,9 @@
 --- b'class' - используйте маркировку b''
 --- используйте списки и циклы, не дублируйте функции
 """
+
+words_list = [b'class', b'function', b'method']
+for element in words_list:
+    print(type(element))
+    print(element)
+    print(len(element))
