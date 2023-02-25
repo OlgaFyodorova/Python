@@ -9,3 +9,10 @@
 --- обязательно!!! усложните задачу, "отловив" и обработав исключение,
 придумайте как это сделать
 """
+
+words_list = ['attribute', 'класс', 'функция', 'type']
+for element in words_list:
+    try:
+        print(bytes(element, 'ascii'))
+    except UnicodeEncodeError:
+        print(f'"{element}" невозможно записать в байтовом типе')
